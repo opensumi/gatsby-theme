@@ -16,7 +16,6 @@ jobs:
         run: |
           yarn --frozen-lockfile
           yarn lint
-          yarn test
           yarn tsc
           yarn run build
         env:

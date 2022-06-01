@@ -144,7 +144,6 @@
     },
     "hooks": {
       "before:init": [
-        "npm test",
         "npm run compile:components"
       ]
     }

@@ -33,7 +33,6 @@
     "start": "yarn workspace example develop",
     "build": "yarn workspace example build",
     "deploy": "yarn build && gh-pages -d example/public",
-    "test": "yarn workspace @opensumi/gatsby-theme test",
     "release": "yarn workspace @opensumi/gatsby-theme run release",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,less}\"",
     "lint": "eslint . --ext '.js,.jsx,.ts,.tsx'",
