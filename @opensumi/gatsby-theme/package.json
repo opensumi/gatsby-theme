@@ -1,7 +1,7 @@
 {
   "name": "@opensumi/gatsby-theme",
-  "description": "OpenSumi Doc Theme",
-  "version": "1.2.5",
+  "description": "OpenSumi Gaysby Theme",
+  "version": "2.0.0",
   "license": "MIT",
   "keywords": [
     "gatsby",
