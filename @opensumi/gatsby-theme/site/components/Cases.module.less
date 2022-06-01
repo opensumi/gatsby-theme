@@ -1,0 +1,306 @@
+@import './mixins';
+.wrapper {
+  margin: auto;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  background: rgba(244, 232, 255, 0.15);
+  height: 562px;
+  .title {
+    height: 40px;
+    font-family: PingFangSC, @font-family;
+    font-size: 28px;
+    color: #000000;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    text-transform: uppercase;
+  }
+  :global([lang='zh']) {
+    .title {
+      letter-spacing: 10px;
+    }
+  }
+  .slider {
+    .container1440;
+  }
+  .appWrapper {
+    position: relative;
+    height: 462px;
+    display: flex;
+    margin-bottom: 80px;
+    .appLeft {
+      width: 23%;
+      margin-top: 40px;
+      margin-left: 100px;
+      height: 480px;
+      padding-top: 40px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: relative;
+      z-index: 10;
+      .appContent {
+        height: fit-content;
+        position: relative;
+        .appLogo {
+          width: 80px;
+        }
+        .appTitle {
+          height: 26px;
+          line-height: 26px;
+          font-family: PingFangSC, @font-family;
+          font-size: 18px;
+          color: #000000;
+          font-weight: 500;
+          margin-top: 24px;
+          position: relative;
+          display: inline-block;
+          &::before {
+            content: '';
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            display: block;
+            position: absolute;
+            height: 12px;
+            background-color: #9f5fdb;
+            opacity: 0.4;
+          }
+        }
+        .appDescription {
+          color: rgba(105, 123, 140, 0.6);
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.65);
+          line-height: 22px;
+          font-weight: 400;
+          margin: 16px 0 0 0;
+          user-select: text;
+        }
+        .detailWrapper {
+          margin: 30px 0 0 0;
+          .detail {
+            font-size: 16px;
+            color: #9f5fdb;
+            font-weight: 500;
+            position: relative;
+            height: 22px;
+            line-height: 22px;
+            &::after {
+              content: '';
+              display: block;
+              position: absolute;
+              right: -20px;
+              top: -1px;
+              height: 22px;
+              line-height: 22px;
+              width: 20px;
+              background: url(https://img.alicdn.com/imgextra/i4/O1CN01bNwvD81ZNP1hfRIvm_!!6000000003182-2-tps-21-36.png)
+                center center no-repeat;
+              background-size: 38%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.appButtons {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  .controlButton {
+    width: 47px;
+    height: 47px;
+    line-height: 47px;
+    transition: all 0.3s;
+    position: absolute;
+    &.left {
+      top: 50%;
+      left: 0;
+      background: url(https://img.alicdn.com/imgextra/i4/O1CN01AMY9rt1ULxhg7kBs9_!!6000000002502-2-tps-36-60.png)
+        center center no-repeat;
+    }
+    &.right {
+      top: 50%;
+      right: 0;
+      background: url(https://img.alicdn.com/imgextra/i2/O1CN01GoVGFc1T2tbLpQCbb_!!6000000002325-2-tps-36-60.png)
+        center center no-repeat;
+    }
+    &.left,
+    &.right {
+      opacity: 0.4;
+      background-size: 14px;
+    }
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .nextButton {
+    width: 47px;
+    margin-left: -1px;
+    background-image: url('https://gw.alipayobjects.com/zos/basement_prod/27ce6e21-bbb6-4490-8326-43483ac39e0b.svg');
+    background-size: 100% 100%;
+    &:hover {
+      background-image: url('https://gw.alipayobjects.com/zos/basement_prod/4d1f0d0a-4e56-4f21-a9aa-06b2f8c3e18e.svg');
+    }
+  }
+}
+
+.appTeaser {
+  position: absolute;
+  height: 462px;
+  right: 80px;
+  padding: 0 60px;
+  background: url(https://img.alicdn.com/imgextra/i3/O1CN013mEUA81iiJebuacaR_!!6000000004446-2-tps-1791-1092.png)
+    center center no-repeat;
+  background-size: 100%;
+}
+
+.slider {
+  height: 100%;
+  :global {
+    .slick-dots {
+      display: none;
+    }
+  }
+}
+
+:global {
+  .slick-current {
+    z-index: 2 !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    .appWrapper {
+      .appLeft {
+        width: 270px;
+      }
+    }
+  }
+  .appTeaser {
+    position: absolute;
+    width: 857px;
+    left: 350px;
+  }
+}
+
+@media (max-width: 900px) {
+  .title {
+    margin-top: 1em !important;
+  }
+  .wrapper {
+    height: 540px;
+    .appWrapper {
+      height: 500px;
+      .appTeaser {
+        margin-top: 20px;
+      }
+      .appLeft {
+        margin: 0;
+        width: 100%;
+        padding-top: 0;
+        .appContent {
+          margin-left: 0;
+          margin: 0 auto;
+        }
+        .appDescription {
+          margin-top: 10px !important;
+          padding: 0 2em;
+        }
+        .detailWrapper {
+          margin-top: 10px !important;
+          &::after {
+            top: -2px !important;
+          }
+        }
+      }
+    }
+  }
+
+  :global {
+    .slick-dots {
+      display: none !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    height: fit-content;
+    .slider {
+      width: 100%;
+      max-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .appWrapper {
+      width: 100%;
+      padding-bottom: 150px;
+      margin-left: 0;
+      flex-direction: column;
+      text-align: center;
+      .appLeft {
+        height: 286px;
+        .appContent {
+          .appLogo {
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            width: 36px;
+            height: 36px;
+            transform: translateX(-18px);
+          }
+          .detailWrapper {
+            margin-top: 40px;
+            .detail {
+              font-size: 1em;
+            }
+          }
+        }
+        .buttons {
+          display: none;
+          position: absolute;
+          bottom: 60px;
+          left: 50%;
+          height: 100px;
+          transform: translateX(-47px);
+          width: 92%;
+        }
+      }
+      .appTeaser {
+        left: 0;
+        margin-top: 60px;
+        margin-bottom: 40px;
+        margin-left: 4.06%;
+        width: 91.47%;
+        height: auto;
+        position: relative;
+      }
+    }
+  }
+
+  .slider {
+    height: 100%;
+    :global {
+      .slick-dots {
+        display: none;
+        bottom: 100px;
+      }
+      .slick-dots li.slick-active button:before {
+        opacity: 1;
+        color: #1890ff;
+      }
+    }
+  }
+}

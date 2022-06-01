@@ -1,0 +1,19 @@
+:root {
+  --docsearch-searchbox-background: #f7f7f7;
+  --docsearch-primary-color: #873bf4;
+}
+.search {
+  margin-right: 36px;
+  line-height: 1.5;
+  white-space: nowrap;
+  transition: all 0.3s;
+  :global(.DocSearch-Button-Placeholder) {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .search {
+    display: none;
+  }
+}

@@ -1,0 +1,6 @@
+.tmp
+__mocks__
+site/__tests__
+
+# dotenv environment variables file
+.env

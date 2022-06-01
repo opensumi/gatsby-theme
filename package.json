@@ -1,0 +1,52 @@
+{
+  "name": "@opensumi/gatsby-theme",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opensumi/gatsby-theme"
+  },
+  "bugs": {
+    "url": "https://github.com/opensumi/gatsby-theme/issues"
+  },
+  "license": "MIT",
+  "workspaces": [
+    "@opensumi/gatsby-theme",
+    "example"
+  ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^24.1.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "gh-pages": "^3.1.0",
+    "husky": "^4.0.0",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^3.0.0"
+  },
+  "scripts": {
+    "start": "yarn workspace example develop",
+    "build": "yarn workspace example build",
+    "deploy": "yarn build && gh-pages -d example/public",
+    "test": "yarn workspace @opensumi/gatsby-theme test",
+    "release": "yarn workspace @opensumi/gatsby-theme run release",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,less}\"",
+    "lint": "eslint . --ext '.js,.jsx,.ts,.tsx'",
+    "lint:fix": "eslint . --ext '.js,.jsx,.ts,.tsx' --fix",
+    "tsc": "tsc"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "resolutions": {
+    "@babel/plugin-transform-spread": "7.12.1",
+    "@babel/standalone": "7.12.6"
+  }
+}

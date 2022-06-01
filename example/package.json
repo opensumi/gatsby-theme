@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "name": "example",
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://opensumi.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opensumi/gatsby-theme/tree/master/example"
+  },
+  "bugs": {
+    "url": "https://github.com/opensumi/gatsby-theme/issues"
+  },
+  "scripts": {
+    "build": "npm run clean && gatsby build --prefix-paths --no-uglify",
+    "develop": "npm run clean && gatsby develop -H 0.0.0.0",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@opensumi/gatsby-theme": "^1.2.5",
+    "@types/react": "^18.0.10",
+    "@types/react-dom": "^18.0.5",
+    "gatsby": "^4.15.1",
+    "ptz-i18n": "^1.0.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}

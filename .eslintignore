@@ -1,0 +1,7 @@
+@opensumi/gatsby-theme/site/**/*.js
+@opensumi/gatsby-theme/lib
+example/examples
+node_modules
+.cache
+public
+dist
