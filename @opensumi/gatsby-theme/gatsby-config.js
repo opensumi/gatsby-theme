@@ -198,16 +198,18 @@ module.exports = ({
           color: theme['primary-color'],
         },
       },
-      {
-        resolve: `gatsby-plugin-algolia`,
-        options: {
-          appId: process.env.GATSBY_ALGOLIA_APP_ID,
-          apiKey: process.env.ALGOLIA_ADMIN_KEY,
-          queries,
-        },
-      },
     ],
   };
+  if (process.env.GATSBY_ALGOLIA_APP_ID) {
+    config.plugins.push({
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        queries,
+      },
+    });
+  }
 
   if ('GATSBY_PATH_PREFIX' in process.env) {
     // eslint-disable-next-line no-console
