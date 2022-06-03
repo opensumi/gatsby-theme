@@ -53,10 +53,5 @@ module.exports = {
     showGithubStars: true,
     showLanguageSwitcher: true, // 用于定义是否展示语言切换
     showSearch: true,
-    docsearchOptions: {
-      appId: 'SOZF8EXD5Z',
-      apiKey: '614258d3f6d9bcfde76edcc8e45887af',
-      indexName: 'docs'
-    },
   },
 };

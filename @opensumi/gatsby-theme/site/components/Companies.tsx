@@ -37,7 +37,6 @@ const Companies: React.FC<CompaniesProps> = ({
           <Row
             key="companies"
             gutter={[{ xs: 77, sm: 77, md: 50, lg: 124 }, 10]}
-            className={styles.companies}
           >
             {getCompanies}
           </Row>

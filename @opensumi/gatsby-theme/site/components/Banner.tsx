@@ -109,7 +109,7 @@ const Banner: React.FC<BannerProps> = ({
           ...button.style,
         }}
       >
-        <span className={styles.button}>{button.text}</span>
+        <span>{button.text}</span>
       </ButtonLink>
     );
   });

@@ -31,6 +31,7 @@ import CustomTag from '../components/CustomTag';
 import { usePrevAndNext } from '../hooks';
 import { capitalize } from '../utils';
 import * as styles from './markdown.module.less';
+import ReadingTime from '../components/ReadingTime';
 
 const { Link: AnchorLink } = Anchor;
 
@@ -236,7 +237,7 @@ export default function Template({
     frontmatter,
     htmlAst,
     tableOfContents,
-    fields: { slug },
+    fields: { slug, readTimeEstimate },
     parent: { relativePath },
   } = markdownRemark;
   const { edges = [] } = allMarkdownRemark;
@@ -463,6 +464,9 @@ export default function Template({
                 </a>
               </Tooltip>
             </h1>
+            {/* <div className={styles.meta}>
+              <ReadingTime readingTime={readTimeEstimate} />
+            </div> */}
             <div className={styles.content}>{renderAst(htmlAst)}</div>
             <div>
               <NavigatorBanner type="prev" post={prev} />

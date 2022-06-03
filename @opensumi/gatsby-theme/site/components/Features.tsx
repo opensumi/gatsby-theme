@@ -34,9 +34,7 @@ const Features: React.FC<FeaturesProps> = React.memo(({ title, features }) => {
     <>
       <section className={styles.features}>
         <div className={styles.title}>
-          <span className={styles.capabilityCharacteristicsPrev}>
-            {title || t('能力特性')}
-          </span>
+          <span>{title || t('能力特性')}</span>
         </div>
         <div className="container">
           <div className={styles.feature_row}>

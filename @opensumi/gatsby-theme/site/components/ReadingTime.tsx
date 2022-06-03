@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 const ReadingTime: React.FC<any> = ({ readingTime }) => {
   const { i18n } = useTranslation();
-  const { text = '', time = 0 } = readingTime;
+  const { totalWords: text = '', duration: time = 0 } = readingTime;
   return (
     <Tag>
       {i18n.language === 'zh'

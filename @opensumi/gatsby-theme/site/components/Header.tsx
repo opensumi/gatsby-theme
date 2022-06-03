@@ -252,7 +252,7 @@ const Header: React.FC<HeaderProps> = ({
               { lang === 'zh' ? '简体中文' : 'English' }
             </a> */}
             <span>
-              <TranslationIcon className={styles.icon} />
+              <TranslationIcon />
               {lang === 'zh' ? '简体中文' : 'English'}
               <DownOutlined style={{ marginLeft: '6px' }} />
             </span>
