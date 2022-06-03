@@ -9,7 +9,7 @@ jobs:
       - name: create
         uses: actions-cool/maintain-one-comment@v1.1.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUBTOKEN }}
           body: |
             ⚡️ Deploying PR Preview...
 

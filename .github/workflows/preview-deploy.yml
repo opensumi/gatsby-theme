@@ -2,7 +2,7 @@ name: Preview Deploy
 
 on:
   workflow_run:
-    workflows: ["Preview Build"]
+    workflows: ['Preview Build']
     types:
       - completed
 
@@ -37,10 +37,10 @@ jobs:
       - name: update status comment
         uses: actions-cool/maintain-one-comment@v1.1.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUBTOKEN }}
           body: |
             🎊 PR Preview has been successfully built and deployed to https://gatsby-theme-preview-pr-${{ steps.pr.outputs.id }}.surge.sh
-            
+
             <img width="300" src="https://user-images.githubusercontent.com/507615/90250366-88233900-de6e-11ea-95a5-84f0762ffd39.png">
 
             <!-- Sticky Pull Request Comment -->
@@ -51,7 +51,7 @@ jobs:
         if: ${{ failure() }}
         uses: actions-cool/maintain-one-comment@v1.1.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUBTOKEN }}
           body: |
             😭 Deploy PR Preview failed.
 
@@ -78,7 +78,7 @@ jobs:
       - name: The job failed
         uses: actions-cool/maintain-one-comment@v1.1.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUBTOKEN }}
           body: |
             😭 Deploy PR Preview failed.
 
