@@ -464,6 +464,7 @@ export default function Template({
                 </a>
               </Tooltip>
             </h1>
+            {/* wating https://github.com/syntra/gatsby-remark-reading-time/pull/15 tobe merged */}
             {/* <div className={styles.meta}>
               <ReadingTime readingTime={readTimeEstimate} />
             </div> */}
