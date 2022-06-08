@@ -77,9 +77,9 @@ const Search: React.FC<SearchProps> = ({ docsearchOptions, lang }) => {
     <div className={styles.search}>
       <DocSearch
         {...docsearchOptions}
-        // searchParameters = {{
-        //   facetFilters: [`tags:${lang}`],
-        // }}
+        searchParameters={{
+          facetFilters: [`lang:${lang}`],
+        }}
         translations={translations}
       />
     </div>
