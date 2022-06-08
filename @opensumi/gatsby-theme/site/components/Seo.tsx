@@ -62,7 +62,7 @@ const SEO: React.FC<SEOProps> = ({
         {
           property: `og:image`,
           content:
-            'https://img.alicdn.com/imgextra/i3/O1CN01Rkfi5j1bJrBDnqEtt_!!6000000003445-2-tps-300-300.png',
+            'https://img.alicdn.com/imgextra/i2/O1CN01dqjQei1tpbj9z9VPH_!!6000000005951-55-tps-87-78.svg',
         },
         {
           property: `og:type`,
@@ -83,7 +83,7 @@ const SEO: React.FC<SEOProps> = ({
         {
           property: `twitter:image`,
           content:
-            'https://img.alicdn.com/imgextra/i3/O1CN01Rkfi5j1bJrBDnqEtt_!!6000000003445-2-tps-300-300.png',
+            'https://img.alicdn.com/imgextra/i2/O1CN01dqjQei1tpbj9z9VPH_!!6000000005951-55-tps-87-78.svg',
         },
       ].concat(meta)}
     />
