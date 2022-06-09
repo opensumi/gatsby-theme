@@ -194,7 +194,7 @@ const Layout: React.FC<LayoutProps> = ({ children, location, footerProps }) => {
         logo: {
           img: <img src={logoUrl} alt={title} />,
         },
-        linl: siteUrl,
+        link: siteUrl,
       }
     : {};
 
