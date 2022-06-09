@@ -175,6 +175,7 @@ const Header: React.FC<HeaderProps> = ({
       {ecosystems && ecosystems.length ? (
         <li>
           <Dropdown
+            destroyPopupOnHide
             className={styles.ecoSystems}
             overlay={
               <Menu>
@@ -199,6 +200,7 @@ const Header: React.FC<HeaderProps> = ({
       {showLanguageSwitcher && (
         <li>
           <Dropdown
+            destroyPopupOnHide
             overlay={
               <Menu
                 defaultSelectedKeys={[lang]}
