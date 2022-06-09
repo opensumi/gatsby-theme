@@ -37,7 +37,7 @@ jobs:
       - name: update status comment
         uses: actions-cool/maintain-one-comment@v1.1.0
         with:
-          token: ${{ secrets.GITHUBTOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             🎊 PR Preview has been successfully built and deployed to https://gatsby-theme-preview-pr-${{ steps.pr.outputs.id }}.surge.sh
 
@@ -51,7 +51,7 @@ jobs:
         if: ${{ failure() }}
         uses: actions-cool/maintain-one-comment@v1.1.0
         with:
-          token: ${{ secrets.GITHUBTOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             😭 Deploy PR Preview failed.
 
@@ -78,7 +78,7 @@ jobs:
       - name: The job failed
         uses: actions-cool/maintain-one-comment@v1.1.0
         with:
-          token: ${{ secrets.GITHUBTOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             😭 Deploy PR Preview failed.
 
