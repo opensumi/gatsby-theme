@@ -13,11 +13,11 @@ module.exports = {
       '一款帮助你快速搭建本地和云端 IDE 的框架 - A framework helps you quickly build Cloud or Desktop IDE products.',
     siteUrl: 'https://opensumi.com',
     logo: {
-      img: 'https://img.alicdn.com/imgextra/i2/O1CN01dqjQei1tpbj9z9VPH_!!6000000005951-55-tps-87-78.svg',
+      img: 'https://img.alicdn.com/imgextra/i1/O1CN01XTErpN24JVlOVVK2I_!!6000000007370-2-tps-300-300.png',
       link: 'https://opensumi.com',
     },
     logoUrl:
-      'https://img.alicdn.com/imgextra/i2/O1CN01dqjQei1tpbj9z9VPH_!!6000000005951-55-tps-87-78.svg',
+      'https://img.alicdn.com/imgextra/i1/O1CN01XTErpN24JVlOVVK2I_!!6000000007370-2-tps-300-300.png',
     githubUrl: 'https://github.com/opensumi/core',
     docsUrl: 'https://github.com/opensumi/doc',
     navs: [
