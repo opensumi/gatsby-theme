@@ -10,9 +10,10 @@ import Seo from '../components/Seo';
 import Header from '../components/Header';
 import PageLoading from '../components/PageLoading';
 import Footer from '../components/Footer';
-import * as styles from './layout.module.less';
+import CopyRightFooter from '../components/CopyRight';
 import TopBanner from '../components/TopBanner';
 import { LayoutContext } from './layout-context';
+import * as styles from './layout.module.less';
 
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
@@ -32,6 +33,7 @@ interface LayoutProps {
   location: Location;
   pageContext: any;
   footerProps: FooterProps;
+  showCopyRight: boolean;
 }
 
 function parseNulltoUndefined<T>(value: T) {
@@ -41,7 +43,12 @@ function parseNulltoUndefined<T>(value: T) {
   return value;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children, location, footerProps }) => {
+const Layout: React.FC<LayoutProps> = ({
+  children,
+  location,
+  footerProps,
+  showCopyRight,
+}) => {
   // https://github.com/gatsbyjs/gatsby/issues/13867#issuecomment-489481343
   if (location.pathname.includes('offline-plugin-app-shell-fallback')) {
     return <PageLoading />;
@@ -249,6 +256,7 @@ const Layout: React.FC<LayoutProps> = ({ children, location, footerProps }) => {
           {...footerProps}
         />
       )}
+      {showCopyRight && <CopyRightFooter />}
     </LayoutContext.Provider>
   );
 };
