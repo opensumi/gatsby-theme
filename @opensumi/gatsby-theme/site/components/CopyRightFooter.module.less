@@ -1,16 +1,48 @@
 .site_footer {
   padding-bottom: 20px;
   color: rgb(147, 147, 147);
-  width: 100%;
   text-align: center;
   line-height: 24px;
   font-size: 14px;
+  background-color: rgb(249, 249, 249);
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(249, 249, 249);
+  z-index: 10;
+  position: relative;
+  .withMenu {
+    width: 1440px;
+    max-width: calc(100% - 80px);
+    margin-left: auto;
+    margin-right: auto;
+  }
   :global(a) {
     color: rgb(147, 147, 147);
+  }
+}
+
+@media only screen and (min-width: 767.99px) {
+  .site_footer.withMenu {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    &.collapsed {
+      margin-left: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 991.99px) {
+  .site_footer.withMenu {
+    margin-left: 301px;
+    width: calc(100% - 301px);
+    &.collapsed {
+      margin-left: 0;
+      width: 100%;
+      max-width: 100%;
+    }
   }
 }
 

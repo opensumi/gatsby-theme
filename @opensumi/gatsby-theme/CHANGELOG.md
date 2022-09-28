@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/opensumi/gatsby-theme/compare/v2.0.6...v2.1.0) (2022-09-28)
+
+### Features
+
+- support add more button on Companies component ([ae79082](https://github.com/opensumi/gatsby-theme/commit/ae7908206d54f78988d53c8bd5d360ad7dc579c9))
+
 ### [2.0.6](https://github.com/opensumi/gatsby-theme/compare/v2.0.5...v2.0.6) (2022-09-05)
 
 ### [2.0.5](https://github.com/opensumi/gatsby-theme/compare/v2.0.4...v2.0.5) (2022-06-15)

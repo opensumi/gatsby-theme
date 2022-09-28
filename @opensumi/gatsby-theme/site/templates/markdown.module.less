@@ -279,7 +279,6 @@
   }
 }
 
-// reference yuque UI
 .toc {
   width: @toc-width;
   float: right;
@@ -287,7 +286,7 @@
   background: #fff;
   max-height: 100vh;
   overflow: auto;
-  margin-top: 64px;
+  margin-top: 56px;
 
   ul > li {
     list-style: none !important;
@@ -381,6 +380,7 @@
   position: fixed;
   top: 64px;
   left: 0px;
+  z-index: 999;
   border-right: 1px solid rgb(214, 222, 230);
   &::after {
     position: absolute;
@@ -555,7 +555,6 @@
 }
 
 .apiAnchor {
-  padding-left: 14px;
   overflow: hidden;
 
   &:hover {
