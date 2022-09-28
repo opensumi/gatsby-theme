@@ -1,5 +1,6 @@
 import React from 'react';
-import { Row, Col } from 'antd';
+import { Row, Col, Button } from 'antd';
+import { PlusOutlined } from '@ant-design/icons';
 import classNames from 'classnames';
 import * as styles from './Companies.module.less';
 
@@ -11,6 +12,8 @@ interface Company {
 interface CompaniesProps {
   title: string;
   companies: Company[];
+  addMoreLink?: string;
+  addMoreText?: string;
   className?: string;
   style?: React.CSSProperties;
 }
@@ -19,6 +22,8 @@ const Companies: React.FC<CompaniesProps> = ({
   title,
   companies = [],
   className,
+  addMoreLink = '',
+  addMoreText = '添加您的公司',
   style,
 }) => {
   const getCompanies = companies.map((company) => (
@@ -40,6 +45,23 @@ const Companies: React.FC<CompaniesProps> = ({
           >
             {getCompanies}
           </Row>
+          {addMoreLink && (
+            <Row
+              key="companies"
+              gutter={[{ xs: 77, sm: 77, md: 50, lg: 124 }, 10]}
+            >
+              <Button
+                href={addMoreLink}
+                className={styles.add_more_button}
+                type="dashed"
+                shape="round"
+                icon={<PlusOutlined />}
+                size="large"
+              >
+                {addMoreText}
+              </Button>
+            </Row>
+          )}
         </div>
       </div>
     </div>
