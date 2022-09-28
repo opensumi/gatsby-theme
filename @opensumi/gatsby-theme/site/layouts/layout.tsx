@@ -256,7 +256,7 @@ const Layout: React.FC<LayoutProps> = ({
           {...footerProps}
         />
       )}
-      {showCopyRight && <CopyRightFooter />}
+      {showCopyRight && <CopyRightFooter location={location} />}
     </LayoutContext.Provider>
   );
 };
