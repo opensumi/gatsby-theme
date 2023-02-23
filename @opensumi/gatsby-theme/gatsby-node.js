@@ -375,6 +375,8 @@ exports.createSchemaCustomization = ({ actions }) => {
       isOpenSumiSite: Boolean
       showDingTalkQRCode: Boolean
       dingTalkQRCode: String
+      showWeChatQRCode: Boolean
+      weChatQRCode: String
       showSearch: Boolean
       docsearchOptions: DocsearchOptions
       ecosystems: [Ecosystems]

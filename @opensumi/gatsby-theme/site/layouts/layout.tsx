@@ -68,6 +68,8 @@ const Layout: React.FC<LayoutProps> = ({
           showGithubCorner
           showDingTalkQRCode
           dingTalkQRCode
+          showWeChatQRCode
+          weChatQRCode
           navs {
             slug
             title {
