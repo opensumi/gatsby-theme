@@ -10,8 +10,9 @@ import {
   MenuOutlined,
   DownOutlined,
   DingtalkOutlined,
+  WechatOutlined,
 } from '@ant-design/icons';
-import { Popover, Menu, Select, Dropdown, message } from 'antd';
+import { Popover, Menu, Dropdown, message } from 'antd';
 import { map } from 'lodash-es';
 import GitHubButton from 'react-github-btn';
 import Search, { SearchProps } from './Search';
@@ -40,10 +41,14 @@ interface HeaderProps {
   showLanguageSwitcher?: boolean;
   /** 切换语言的回调 */
   onLanguageChange?: (language: string) => void;
-  /** 是否二维码 */
+  /** 是否展示钉钉二维码 */
   showDingTalkQRCode?: boolean;
-  /** 二维码图表地址 */
+  /** 钉钉二维码图片 */
   dingTalkQRCode?: string;
+  /** 是否展示微信二维码 */
+  showWeChatQRCode?: boolean;
+  /** 微信二维码图片 */
+  weChatQRCode?: string;
   /** 自定义 logo */
   logo?: {
     img?: React.ReactNode;
@@ -102,6 +107,8 @@ const Header: React.FC<HeaderProps> = ({
   // 默认就使用 OpenSumi 的公众号
   showDingTalkQRCode = true,
   dingTalkQRCode = 'https://img.alicdn.com/imgextra/i1/O1CN01k3gCmL1HWPjLchVv7_!!6000000000765-0-tps-200-199.jpg',
+  showWeChatQRCode = true,
+  weChatQRCode = 'https://img.alicdn.com/imgextra/i4/O1CN01mAEZDH26YkE1hfUAi_!!6000000007674-2-tps-200-199.png',
   siteUrl,
   githubUrl = 'https://github.com/opensumi/core',
   defaultLanguage,
@@ -262,19 +269,40 @@ const Header: React.FC<HeaderProps> = ({
         </li>
       )}
 
+      {showWeChatQRCode && weChatQRCode && (
+        <li className={styles.QRCode}>
+          <Popover
+            content={
+              <img
+                width="100%"
+                height="100%"
+                src={weChatQRCode}
+                alt="wx-qrcode"
+              />
+            }
+            title={null}
+            overlayClassName="wx-qrcode-popover"
+            overlayStyle={{ width: 128, height: 128 }}
+            overlayInnerStyle={{ padding: 2 }}
+          >
+            <WechatOutlined />
+          </Popover>
+        </li>
+      )}
+
       {showDingTalkQRCode && dingTalkQRCode && (
-        <li className={styles.dingTalkQRCode}>
+        <li className={styles.QRCode}>
           <Popover
             content={
               <img
                 width="100%"
                 height="100%"
                 src={dingTalkQRCode}
-                alt="wx-qrcode"
+                alt="dd-qrcode"
               />
             }
             title={null}
-            overlayClassName="wx-qrcode-popover"
+            overlayClassName="dd-qrcode-popover"
             overlayStyle={{ width: 128, height: 128 }}
             overlayInnerStyle={{ padding: 2 }}
           >
