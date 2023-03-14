@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/opensumi/gatsby-theme/compare/v2.3.0...v2.4.0) (2023-03-14)
+
+### Features
+
+- support community page ([b82fa64](https://github.com/opensumi/gatsby-theme/commit/b82fa64966997fb35dfa08a7df79440d37517bc7))
+
 ## [2.3.0](https://github.com/opensumi/gatsby-theme/compare/v2.0.6...v2.3.0) (2023-03-14)
 
 ### Features
