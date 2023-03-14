@@ -124,6 +124,8 @@ const Layout: React.FC<LayoutProps> = ({
       showGithubCorner,
       showDingTalkQRCode,
       dingTalkQRCode,
+      showWeChatQRCode,
+      weChatQRCode,
       redirects = [],
       docsearchOptions,
       ecosystems,
@@ -241,6 +243,8 @@ const Layout: React.FC<LayoutProps> = ({
         showLanguageSwitcher={parseNulltoUndefined(showLanguageSwitcher)}
         showDingTalkQRCode={parseNulltoUndefined(showDingTalkQRCode)}
         dingTalkQRCode={parseNulltoUndefined(dingTalkQRCode)}
+        showWeChatQRCode={parseNulltoUndefined(showWeChatQRCode)}
+        weChatQRCode={parseNulltoUndefined(weChatQRCode)}
         docsearchOptions={docsearchOptions}
         ecosystems={ecosystems}
         {...logoProps}
