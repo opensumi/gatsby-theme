@@ -12,7 +12,7 @@ import {
   DingtalkOutlined,
   WechatOutlined,
 } from '@ant-design/icons';
-import { Popover, Menu, Dropdown, message } from 'antd';
+import { Popover, Menu, Dropdown } from 'antd';
 import { map } from 'lodash-es';
 import GitHubButton from 'react-github-btn';
 import Search, { SearchProps } from './Search';
