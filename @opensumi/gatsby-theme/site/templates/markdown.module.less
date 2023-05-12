@@ -4,21 +4,20 @@
 
 .markdown {
   margin-top: 24px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 2;
   margin-left: 300px;
   &.collapsed {
     margin-left: 0;
   }
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC,
-    Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-family: 'Inter var experimental', 'Inter var', -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 
   h1 {
     margin-bottom: 20px;
     font-weight: 500;
     font-size: 30px;
-    font-family: IBM Plex Sans Avenir, @font-family;
     line-height: 38px;
   }
 
@@ -39,7 +38,6 @@
     clear: both;
     margin: 1em 0 0.3em;
     font-weight: 500;
-    font-family: IBM Plex Sans Avenir, @font-family;
   }
 
   h3 {
@@ -96,6 +94,9 @@
   code[class*='language-text'] {
     white-space: break-spaces;
     word-break: break-word;
+    background: #f0f0f0;
+    padding: 2px 6px;
+    margin: 0 3px;
   }
 
   code.language-sign,
@@ -105,11 +106,6 @@
 
   pre.language-sign {
     border: 1px solid #91d5ff;
-  }
-
-  :global(.gatsby-highlight-code-line) {
-    background-color: #f9f0ff;
-    border-left: 2px solid #873bf4;
   }
 
   description {
@@ -196,6 +192,20 @@
 
   blockquote p {
     margin: 0;
+  }
+
+  p,
+  ul,
+  li {
+    a {
+      font-weight: 500;
+      color: #5e6687;
+      border-bottom: 1px dashed #873bf4;
+      transition: color.25s;
+      &:hover {
+        color: #873bf4;
+      }
+    }
   }
 
   > br,
@@ -286,7 +296,7 @@
   background: #fff;
   max-height: 100vh;
   overflow: auto;
-  margin-top: 56px;
+  margin-top: 64px;
 
   ul > li {
     list-style: none !important;
@@ -300,6 +310,9 @@
 
     a {
       color: @text-color;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -333,7 +346,6 @@
       }
     }
     .ant-menu-title-content {
-      font-family: IBM Plex Sans Avenir, @font-family;
     }
     .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
       background-color: #fff;
@@ -380,7 +392,7 @@
   position: fixed;
   top: 64px;
   left: 0px;
-  z-index: 999;
+  z-index: 20;
   border-right: 1px solid rgb(214, 222, 230);
   &::after {
     position: absolute;
@@ -556,6 +568,7 @@
 
 .apiAnchor {
   overflow: hidden;
+  color: rgb(49, 70, 89);
 
   &:hover {
     overflow-y: auto;
@@ -576,12 +589,12 @@
 
   .parent {
     padding: 5px 0 5px 24px;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .children {
     padding: 5px 0 5px 24px;
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -601,12 +614,8 @@
 }
 
 :global(.ant-anchor-link-title) {
-  font-family: IBM Plex Sans Avenir, @font-family;
   font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #74818a;
+  color: #5b5b5b;
   padding: 0;
 }
 

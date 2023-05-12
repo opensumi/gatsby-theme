@@ -31,7 +31,6 @@ import CustomTag from '../components/CustomTag';
 import { usePrevAndNext } from '../hooks';
 import { capitalize } from '../utils';
 import * as styles from './markdown.module.less';
-import ReadingTime from '../components/ReadingTime';
 
 const { Link: AnchorLink } = Anchor;
 
@@ -439,6 +438,7 @@ export default function Template({
               <Anchor
                 className={styles.apiAnchor}
                 onChange={onAnchorLinkChange}
+                targetOffset={74}
               >
                 {renderAnchorLinks(anchorLinks)}
               </Anchor>
