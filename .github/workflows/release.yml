@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - name: Install dependencies
+        run: yarn
+      - name: Setup .yarnrc.yml
+        run: |
+          yarn config set -H npmRegistryServer "https://registry.npmjs.org"
+          yarn config set -H npmAlwaysAuth true
+          yarn config set -H npmAuthToken $NPM_AUTH_TOKEN
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - name: Publish
+        run: |
+          cd @opensumi/gatsby-theme
+          yarn publish
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
