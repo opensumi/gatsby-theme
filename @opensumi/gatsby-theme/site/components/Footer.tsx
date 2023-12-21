@@ -176,6 +176,17 @@ const Footer: React.FC<FooterProps> = ({
           url: 'https://opendocs.alipay.com/mini/ide/overview',
           openExternal: true,
         },
+        {
+          icon: (
+            <img
+              src="https://mdn.alipayobjects.com/huamei_htww6h/afts/img/A*BstfT6p0xWUAAAAAAAAAAAAADhl8AQ/original"
+              alt={t('支付宝小程序云 Cloud IDE')}
+            />
+          ),
+          title: t('支付宝小程序云 Cloud IDE'),
+          url: 'https://ide.cloud.alipay.com',
+          openExternal: true,
+        },
       ],
     };
 
